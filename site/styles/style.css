@@ -91,6 +91,7 @@
 	position: absolute;
 	top: 80px;
 	right: 55px;
+	border: 2px solid #ffffff;
 	background-color: #1c1c1c;
 	padding: 20px;
 	border-radius: 8px;
