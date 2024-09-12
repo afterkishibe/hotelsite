@@ -165,6 +165,7 @@
 }
 .hotel__button {
 	font-size: 30px;
+	font-weight: 600;
 	align-self: flex-end;
 	width: 521px;
 	border-radius: 10px;
@@ -173,8 +174,9 @@
 	display: block;
 	background-color: #2f80ed;
 	transform: translate(0, 40px);
-	box-shadow: 3px 4px 23.1px 0px #909090;
+	box-shadow: 1px 1px 3px 0px #909090;
 }
+
 
 @media (max-width: 1200px) {
 	.hotel__button {
@@ -196,4 +198,8 @@
 		font-weight: 400;
 		letter-spacing: -2px;
 	}
+}
+
+.hotel__button:hover{
+	background-color: #2b7ae1;
 }
