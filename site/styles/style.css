@@ -307,7 +307,6 @@
 	}
 }
 
-
 .service {
 	padding: 0 0 20px 0;
 }
@@ -425,74 +424,94 @@
 	.block-group__text3 {
 		padding: 10px 0;
 	}
-	.block-notary__text{
+	.block-notary__text {
 		padding: 10px 0;
 	}
-	.block-group__box{
+	.block-group__box {
 		gap: 5px;
 	}
-	.block-group{
+	.block-group {
 		gap: 5px;
 	}
-	.service__wrapper{
+	.service__wrapper {
 		gap: 5px;
 	}
 }
 
-
 .slider {
-  max-width: 1440px;
+	max-width: 1440px;
 	min-height: 40vw;
-  position: relative;
-  overflow: hidden;
+	position: relative;
+	overflow: hidden;
 	margin: 30px 0 30px 0;
 	border-radius: 20px;
 }
 @media (max-width:1400px) {
 	.slider{
-		min-height: 60vw;
+			min-height: 60vw;
 	}
+
 }
 
 .slider-img {
-  width: 100%;
+	width: 100%;
 	border-radius: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+.slider-img2 {
+	width: 100%;
+	border-radius: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.5s ease;
 }
 
 .slider-img.active {
-  opacity: 1;
+	opacity: 1;
+}
+.slider-img2.active2 {
+	opacity: 1;
 }
 
 .slider img {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
 }
 
 .slider .prev {
-  left: 10px;
+	left: 10px;
+}
+.slider .prev2 {
+	left: 10px;
 }
 
 .slider .next {
-  right: 10px;
+	right: 10px;
+}
+.slider .next2 {
+	right: 10px;
 }
 
 .luxroom__title {
 	position: relative;
-	margin: 0 0 0 100px;
+	margin: 0 0 0 20px;
 	font-size: 30px;
-	font-weight: 500;
+	font-weight: 800;
 	line-height: 33px;
 	text-align: left;
+	text-transform: uppercase;
 }
 
-.luxroom__title::before{
+/* .luxroom__title::before {
 	position: absolute;
 	content: 'Наші';
 	font-family: Montserrat;
@@ -503,9 +522,61 @@
 	text-align: left;
 	left: -70px;
 	top: 0;
-	color: #4285F4;
-}
+	color: #4285f4;
+} */
 
 .luxroom {
+	padding: 30px 0;
+}
+
+.luxroom__info {
+}
+.luxroom__name {
+	position: relative;
+	margin: 0 0 30px 120px;
+	font-size: 27.81px;
+	font-weight: 700;
+	line-height: 30.59px;
+	letter-spacing: 1.0679998397827148px;
+	text-align: left;
+}
+.blue::before {
+	position: absolute;
+	content: 'номер';
+	font-family: Montserrat;
+	font-size: 22.71px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 33.12px;
+	text-align: left;
+	left: -90px;
+	top: 0;
+	color: #59872c;
+}
+.luxroom__label {
+	font-size: 24.48px;
+	font-weight: 700;
+	line-height: 26.92px;
+	letter-spacing: 0.734250009059906px;
+	text-align: left;
+	margin: 0 0 20px 20px;
+}
+.luxrum__services {
+}
+.luxroom__point {
+	font-size: 17.8px;
+	font-weight: 500;
+	line-height: 38.96px;
+	letter-spacing: 0.6674999594688416px;
+	text-align: left;
+	color: #A0A0A0;
+	padding: 0 0 0 30px;
+	border-bottom: 1px solid #A0A0A0;
+	background: url(../image/pointIcon.png) 6px 10px  no-repeat;
+}
+
+
+
+.standartroom{
 	padding: 30px 0;
 }

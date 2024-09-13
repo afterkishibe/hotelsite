@@ -60,3 +60,39 @@ controlls.forEach(e => {
 });
 
 show(imageIndex);
+
+
+
+
+
+const images2 = document.querySelectorAll('.slider-img2');
+const controlls2 = document.querySelectorAll('.controlls2');
+let imageIndex2 = 0;
+
+function show2(index2) {
+	images2[imageIndex2].classList.remove('active2');
+	images2[index2].classList.add('active2');
+	imageIndex2 = index2;
+}
+
+controlls2.forEach(e => {
+	e.addEventListener('click', () => {
+		if (event.target.classList.contains('prev2')) {
+			let index2 = imageIndex2 - 1;
+
+			if (index2 < 0) {
+				index2 = images2.length - 1;
+			}
+
+			show2(index2);
+		} else if (event.target.classList.contains('next2')) {
+			let index2 = imageIndex2 + 1;
+			if (index2 >= images2.length) {
+				index2 = 0;
+			}
+			show2(index2);
+		}
+	});
+});
+
+show2(imageIndex2);
