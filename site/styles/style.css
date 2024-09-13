@@ -306,7 +306,7 @@
 		width: 43vw;
 	}
 }
-/* dsdasda */
+
 
 .service {
 	padding: 0 0 20px 0;
@@ -437,4 +437,75 @@
 	.service__wrapper{
 		gap: 5px;
 	}
+}
+
+
+.slider {
+  max-width: 1440px;
+	min-height: 40vw;
+  position: relative;
+  overflow: hidden;
+	margin: 30px 0 30px 0;
+	border-radius: 20px;
+}
+@media (max-width:1400px) {
+	.slider{
+		min-height: 60vw;
+	}
+}
+
+.slider-img {
+  width: 100%;
+	border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider-img.active {
+  opacity: 1;
+}
+
+.slider img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slider .prev {
+  left: 10px;
+}
+
+.slider .next {
+  right: 10px;
+}
+
+.luxroom__title {
+	position: relative;
+	margin: 0 0 0 100px;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 33px;
+	text-align: left;
+}
+
+.luxroom__title::before{
+	position: absolute;
+	content: 'Наші';
+	font-family: Montserrat;
+	font-size: 22.71px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 33.12px;
+	text-align: left;
+	left: -70px;
+	top: 0;
+	color: #4285F4;
+}
+
+.luxroom {
+	padding: 30px 0;
 }
