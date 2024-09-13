@@ -174,6 +174,7 @@
 	background-color: #2f80ed;
 	transform: translate(0, 40px);
 	box-shadow: 1px 1px 3px 0px #909090;
+	margin: 0 20px 0 0;
 }
 
 @media (max-width: 1200px) {
@@ -181,6 +182,7 @@
 		width: 321px;
 		padding: 20px 0;
 		font-size: 28px;
+		margin: 0 0 0 0;
 	}
 }
 @media (max-width: 700px) {
@@ -203,7 +205,7 @@
 }
 
 .about {
-	padding: 0 0 100px 0;
+	padding: 0 0 50px 0;
 }
 .container {
 }
@@ -250,6 +252,7 @@
 }
 .hotel-info__picture2 {
 	max-width: 100%;
+	border-radius: 20px;
 }
 .hotel-info__box2 {
 	display: flex;
@@ -261,9 +264,11 @@
 }
 .hotel-info__picture3 {
 	max-width: 100%;
+	border-radius: 20px;
 }
 .hotel-info__picture4 {
 	max-width: 100%;
+	border-radius: 20px;
 }
 
 @media (max-width: 1232.98px) {
@@ -299,5 +304,137 @@
 	}
 	.hotel-info__picture4 {
 		width: 43vw;
+	}
+}
+/* dsdasda */
+
+.service {
+	padding: 0 0 20px 0;
+}
+.container {
+}
+.service__wrapper {
+	display: flex;
+	gap: 20px;
+}
+.service__block {
+}
+.block-notary {
+	flex: 1 0 437.19px;
+	background: url(../image/mmm1.png) no-repeat;
+	min-height: 706.25px;
+}
+.block-notary__text {
+	color: #ffffff;
+	font-size: 42.7px;
+	font-weight: 500;
+	line-height: 46.97px;
+	text-align: center;
+	padding: 30px 0;
+}
+.block-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.block-group__box {
+	display: flex;
+	gap: 20px;
+}
+.block-group__text1 {
+	background: url(../image/mmm2.png) no-repeat;
+	background-size: cover;
+	flex: 1 0 429px;
+	min-height: 342.42px;
+	color: #ffffff;
+	font-size: 42.7px;
+	font-weight: 500;
+	line-height: 46.97px;
+	text-align: center;
+	padding: 30px 0;
+}
+.block-group__text2 {
+	background: url(../image/mmm3.png) no-repeat;
+	background-size: cover;
+	flex: 1 0 429px;
+	min-height: 342.42px;
+	color: #ffffff;
+	font-size: 42.7px;
+	font-weight: 500;
+	line-height: 46.97px;
+	text-align: center;
+	padding: 30px 0;
+}
+.block-group__text3 {
+	background: url(../image/mmm4.png) no-repeat;
+	background-size: cover;
+	flex: 1 0 879.41px;
+	min-height: 342.42px;
+	color: #ffffff;
+	font-size: 42.7px;
+	font-weight: 500;
+	line-height: 46.97px;
+	text-align: center;
+	padding: 30px 0;
+}
+
+@media (max-width: 1439.98px) {
+	.block-group__text1 {
+		min-height: 0;
+		flex: 1 1 879.41px;
+		border-radius: 20px;
+	}
+	.block-group__text2 {
+		min-height: 0;
+		flex: 1 1 879.41px;
+		border-radius: 20px;
+	}
+	.block-group__text3 {
+		min-height: 0;
+		flex: 1 1 1439.41px;
+		border-radius: 20px;
+	}
+	.block-group__box {
+		flex-wrap: wrap;
+		flex: 1 1 879.41px;
+	}
+	.block-notary {
+		flex: 1 1 437.19px;
+		min-height: 0;
+		background: url(../image/mmm1.png) no-repeat;
+		background-size: cover;
+		border-radius: 20px;
+	}
+	.service__wrapper {
+		flex-wrap: wrap;
+	}
+	.block-group {
+		flex: 1 1 1439px;
+	}
+}
+@media (max-width: 760px) {
+	.service__wrapper * {
+		font-size: 23px;
+	}
+	.block-group__text1 {
+		padding: 10px 0;
+	}
+	.block-group__text2 {
+		padding: 10px 0;
+	}
+	.block-group__text3 {
+		padding: 10px 0;
+	}
+	.block-notary__text{
+		padding: 10px 0;
+	}
+	.block-group__box{
+		gap: 5px;
+	}
+	.block-group{
+		gap: 5px;
+	}
+	.service__wrapper{
+		gap: 5px;
 	}
 }
