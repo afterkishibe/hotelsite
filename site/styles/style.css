@@ -218,7 +218,7 @@
 }
 .picture1 {
 	max-width: 100%;
-	border-radius: 20px;
+	border-radius: 0 0 20px 20px;
 }
 .about__info {
 }
@@ -274,7 +274,7 @@
 	}
 	.hotel-info__box2 {
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: space-between;
 		overflow: hidden;
 		gap: 0;
 	}
@@ -294,7 +294,7 @@
 	.hotel-info__picture2 {
 		width: 100vw;
 	}
-		.hotel-info__picture3 {
+	.hotel-info__picture3 {
 		width: 43vw;
 	}
 	.hotel-info__picture4 {
