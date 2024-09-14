@@ -1,33 +1,30 @@
 // pipiski
 const burgerMenu = document.querySelector('.burger-menu');
 const mobileNav = document.querySelector('.mobile-navigation');
-const navLinks = document.querySelectorAll('.mobile-navigation .navigation_link a');
-
+const navLinks = document.querySelectorAll(
+	'.mobile-navigation .navigation_link a'
+);
 
 function closeMobileMenu() {
-  mobileNav.classList.remove('show');
-  burgerMenu.classList.remove('active');
+	mobileNav.classList.remove('show');
+	burgerMenu.classList.remove('active');
 }
 
-
-burgerMenu.addEventListener('click', (event) => {
-  event.stopPropagation(); 
-  mobileNav.classList.toggle('show');
-  burgerMenu.classList.toggle('active'); 
+burgerMenu.addEventListener('click', event => {
+	event.stopPropagation();
+	mobileNav.classList.toggle('show');
+	burgerMenu.classList.toggle('active');
 });
-
 
 navLinks.forEach(link => {
-  link.addEventListener('click', closeMobileMenu);
+	link.addEventListener('click', closeMobileMenu);
 });
 
-
-document.addEventListener('click', (event) => {
-  if (!mobileNav.contains(event.target) && !burgerMenu.contains(event.target)) {
-    closeMobileMenu();
-  }
+document.addEventListener('click', event => {
+	if (!mobileNav.contains(event.target) && !burgerMenu.contains(event.target)) {
+		closeMobileMenu();
+	}
 });
-
 
 const images = document.querySelectorAll('.slider-img');
 const controlls = document.querySelectorAll('.controlls');
@@ -61,10 +58,6 @@ controlls.forEach(e => {
 
 show(imageIndex);
 
-
-
-
-
 const images2 = document.querySelectorAll('.slider-img2');
 const controlls2 = document.querySelectorAll('.controlls2');
 let imageIndex2 = 0;
@@ -97,49 +90,47 @@ controlls2.forEach(e => {
 
 show2(imageIndex2);
 
+document.addEventListener('DOMContentLoaded', function () {
+	let images = document.images;
+	let totalImages = images.length;
+	let loadedImages = 0;
 
+	// Функция для обновления процента загрузки
+	function updateLoadingPercentage() {
+		let percentage = Math.round((loadedImages / totalImages) * 100);
+		document.getElementById('loading-percentage').textContent =
+			percentage + '%';
 
-    document.addEventListener('DOMContentLoaded', function() {
-        let images = document.images;
-        let totalImages = images.length;
-        let loadedImages = 0;
+		// Скрываем прелоадер, когда загрузка достигнет 100%
+		if (loadedImages === totalImages) {
+			document.getElementById('preloader').style.display = 'none';
+			document.getElementById('content').style.display = 'block';
+		}
+	}
 
-        // Функция для обновления процента загрузки
-        function updateLoadingPercentage() {
-            let percentage = Math.round((loadedImages / totalImages) * 100);
-            document.getElementById('loading-percentage').textContent = percentage + '%';
-
-            // Скрываем прелоадер, когда загрузка достигнет 100%
-            if (loadedImages === totalImages) {
-                document.getElementById('preloader').style.display = 'none';
-                document.getElementById('content').style.display = 'block';
-            }
-        }
-
-        // Если на странице нет изображений, скрываем прелоадер сразу
-        if (totalImages === 0) {
-            updateLoadingPercentage(); // Сразу показываем 100%
-            document.getElementById('preloader').style.display = 'none';
-            document.getElementById('content').style.display = 'block';
-        } else {
-            // Слушаем событие загрузки для каждого изображения
-            Array.from(images).forEach(function (img) {
-                if (img.complete) {
-                    // Если изображение уже загружено
-                    loadedImages++;
-                    updateLoadingPercentage();
-                } else {
-                    // События загрузки и ошибки для изображений
-                    img.addEventListener('load', function () {
-                        loadedImages++;
-                        updateLoadingPercentage();
-                    });
-                    img.addEventListener('error', function () {
-                        loadedImages++;
-                        updateLoadingPercentage();
-                    });
-                }
-            });
-        }
-    });
-
+	// Если на странице нет изображений, скрываем прелоадер сразу
+	if (totalImages === 0) {
+		updateLoadingPercentage(); // Сразу показываем 100%
+		document.getElementById('preloader').style.display = 'none';
+		document.getElementById('content').style.display = 'block';
+	} else {
+		// Слушаем событие загрузки для каждого изображения
+		Array.from(images).forEach(function (img) {
+			if (img.complete) {
+				// Если изображение уже загружено
+				loadedImages++;
+				updateLoadingPercentage();
+			} else {
+				// События загрузки и ошибки для изображений
+				img.addEventListener('load', function () {
+					loadedImages++;
+					updateLoadingPercentage();
+				});
+				img.addEventListener('error', function () {
+					loadedImages++;
+					updateLoadingPercentage();
+				});
+			}
+		});
+	}
+});

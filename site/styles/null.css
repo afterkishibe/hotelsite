@@ -99,3 +99,7 @@ html {
     padding: 0 20px;
   }
 }
+
+html{
+  scroll-behavior: smooth;
+}

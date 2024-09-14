@@ -16,8 +16,8 @@
 							<a class="number" href="tel:+380000000000">+38 (800) 555-35-35</a>
 						</div>
 						<ul class="header_nav navigation">
-							<li class="navigation_link"><a href="#">Номери</a></li>
-							<li class="navigation_link"><a href="#">Як відпочити?</a></li>
+							<li class="navigation_link"><a href="#rooms">Номери</a></li>
+							<li class="navigation_link"><a href="#how">Як відпочити?</a></li>
 						</ul>
 						<div class="burger-menu">
 							<span class="burger-icon"></span>
@@ -27,8 +27,8 @@
 					</div>
 				</div>
 				<ul class="mobile-navigation">
-					<li class="navigation_link"><a href="#">Номери</a></li>
-					<li class="navigation_link"><a href="#">Як відпочити?</a></li>
+					<li class="navigation_link"><a href="#rooms">Номери</a></li>
+					<li class="navigation_link"><a href="#how">Як відпочити?</a></li>
 				</ul>
 			</div>
 			<div class="main">
@@ -111,7 +111,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="luxroom">
+				<section id="rooms" class="luxroom">
 					<div class="container">
 						<div class="luxroom__wrapper">
 							<div class="luxroom__slider">
@@ -195,14 +195,63 @@
 									<li class="luxroom__point">Набір рушників</li>
 									<li class="luxroom__point">Вигляд у двір</li>
 									<li class="luxroom__point">Сніданок</li>
-									<li class="luxroom__point">Кондиціонер</li>
+									<li class="luxroom__point">Телевізор</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</section>
+				<section id="how" class="chill">
+					<div class="container">
+						<div class="chill__wrapper">
+							<div class="chill__picture">
+								<img src="image/Shape.svg" alt="img" class="chill__image" />
+							</div>
+							<div class="chill__box">
+								<h3 class="chill__title">Як відпочити?</h3>
+								<p class="chill__text">
+									Мотель знаходиться біля траси, праворуч від дороги за
+									заправкою "АМІС" (для тих, хто їде зі сторони міста Львів).
+									Для тих, хто їде в напрямку Львова (зі сторони міста Миколаїв)
+									для зручного розвороту необхідно використати міст кільцевої
+									дороги (після заправки "WOG" проїхати під мостом і виїхати на
+									міст, а далі знову повернути праворуч для з'їзду з моста).
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="map">
+					<div class="container">
+						<div class="map__wrapper">
+							<div onclick="window.location.href='https://www.google.com/maps/dir/?api=1&dir_action=navigate&destination=49.762902,24.013533'" class="map__location">
+								<img  src="image/map.PNG" alt="location" class="map__image" />
+								<div class="map__info">
+									<h3 class="map__title">Наша адреса</h3>
+									<span class="map__text">село Солонка, вул. Польова, 2 б </span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
-			<div class="footer"></div>
+			<div class="footer">
+				<div class="container">
+					<div class="footer__wrapper">
+						<h3 class="footer__title">Зв'язатись з нами!</h3>
+						<ul class="footer__massages">
+							<li class="footer__massage"><a href="tel:+38 800 555 35 35">По телефону</a></li>
+							<li class="footer__massage"><a href="#">В WhatsApp</a></li>
+							<li class="footer__massage"><a href="#">В Telegram</a></li>
+						</ul>
+						<ul class="footer__nav">
+							<li class="footer__navlink"><a href="#rooms">Номери</a></li>
+							<li class="footer__navlink"><a href="#how">Як відпочити?</a></li>
+							<li class="footer__navlink"><a href="tel:+38 800 555 35 35">+38 800 555 35 35</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 		<script src="scripts.js"></script>
 	</body>
