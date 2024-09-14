@@ -10,6 +10,10 @@
 	line-height: 37.8px;
 }
 
+.number:hover{
+	color: #3e2d2d;
+}
+
 .header_wrapper {
 	display: flex;
 	justify-content: space-between;
@@ -23,6 +27,9 @@
 .navigation_link {
 	font-size: 30px;
 	line-height: 37.8px;
+}
+.navigation_link a:hover{
+	color: #6d6d6d;
 }
 
 .navigation_link:not(:last-child) {
@@ -752,6 +759,10 @@
 .footer__massage a {
 	color: #6d6d6d;
 }
+.footer__massage a:hover{
+	color: #1c1c1c;
+}
+
 .footer__massage:nth-child(1) {
 	background: url(../image/phone.png) left top no-repeat;
 	background-size: 40px;
@@ -776,6 +787,9 @@
 .footer__navlink a {
 	color: #1c1c1c;
 }
+.footer__navlink a:hover{
+	color: #db2424;
+}
 
 @media (max-width: 500px) {
 	.footer__massages {
@@ -787,10 +801,19 @@
 	}
 }
 
-.room__button{
+.room__button {
 	padding: 10px 20px;
 	color: #ffffff;
 	background-color: #2b7ae1;
 	border-radius: 20px;
 	font-weight: 600;
+	box-shadow: 0px 2px 1px black;
+	margin: 0 0 3px 0;
+}
+.room__button:active {
+	box-shadow: 0px 0px 0px black;
+	transform: translate(0,2px);
+}
+.room__button:hover{
+		background-color: #1c5eb5;
 }
